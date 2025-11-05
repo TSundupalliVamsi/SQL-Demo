@@ -1,0 +1,9 @@
+ELECT Query with GROUP BY, HAVING, COUNT, SUM:-
+
+SELECT d.DepartmentName,
+       COUNT(e.EmployeeID) AS EmployeeCount,
+       SUM(e.Salary) AS TotalSalary
+FROM employees e
+JOIN departments d ON e.DepartmentID = d.DepartmentID
+GROUP BY d.DepartmentName
+HAVING COUNT(e.EmployeeID) > 1;
