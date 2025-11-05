@@ -1,0 +1,8 @@
+SELECT Query with WHERE, NOT IN, LIKE, ORDER BY:-
+
+SELECT *
+FROM employees
+WHERE Salary > 65000
+  AND DepartmentID NOT IN (2)
+  AND FirstName LIKE 'J%'
+ORDER BY Salary DESC;
