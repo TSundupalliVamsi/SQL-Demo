@@ -1,0 +1,15 @@
+Create Tables with Primary Keys:-
+
+CREATE TABLE departments (
+    DepartmentID INT AUTO_INCREMENT PRIMARY KEY,
+    DepartmentName VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE employees (
+    EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL,
+    Email VARCHAR(150),
+    Salary DECIMAL(10,2),
+    DepartmentID INT
+);
