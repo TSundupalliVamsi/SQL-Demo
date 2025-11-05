@@ -1,0 +1,5 @@
+INNER JOIN:-
+
+SELECT e.EmployeeID, e.FirstName, e.LastName, d.DepartmentName
+FROM employees e
+INNER JOIN departments d ON e.DepartmentID = d.DepartmentID;
