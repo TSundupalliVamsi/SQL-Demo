@@ -1,0 +1,3 @@
+Add Index:- 
+
+CREATE INDEX idx_lastname ON employees(LastName);
