@@ -1,0 +1,4 @@
+Add Unique Constraint:-
+
+ALTER TABLE employees
+ADD CONSTRAINT uq_email UNIQUE (Email);
