@@ -1,0 +1,25 @@
+
+Insert into departments
+INSERT INTO departments (DepartmentName)
+VALUES 
+('Human Resources'),
+('Finance'),
+('Information Technology'),
+('Marketing'),
+('Operations'),
+('Customer Support'),
+('Logistics'),
+('Legal');
+
+Insert into employees
+INSERT INTO employees (FirstName, LastName, Email, Salary, DepartmentID)
+VALUES
+('Mohan', 'Kumar', 'mohan.kumar@example.com', 65000, 1),
+('Vicky', 'Reddy', 'vicky.reddy@example.com', 72000, 2),
+('Vamsi', 'Krishna', 'vamsi.krishna@example.com', 69000, 3),
+('Chaithanya', 'Rao', 'chaithanya.rao@example.com', 71000, 4),
+('Pavan', 'Kalyan', 'pavan.kalyan@example.com', 73000, 5),
+('Ananya', 'Sharma', 'ananya.sharma@example.com', 68000, 1),
+('Rahul', 'Verma', 'rahul.verma@example.com', 75000, 2),
+('Sneha', 'Patel', 'sneha.patel@example.com', 70000, 3);
+
