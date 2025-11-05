@@ -1,0 +1,5 @@
+LEFT JOIN:-
+
+SELECT e.EmployeeID, e.FirstName, e.LastName, d.DepartmentName
+FROM employees e
+LEFT JOIN departments d ON e.DepartmentID = d.DepartmentID;
