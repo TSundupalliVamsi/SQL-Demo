@@ -1,0 +1,43 @@
+-- Start first transaction
+START TRANSACTION;
+
+-- 5 INSERT statements on departments
+INSERT INTO departments (DepartmentName) VALUES ('Operations');
+INSERT INTO departments (DepartmentName) VALUES ('Customer Support');
+INSERT INTO departments (DepartmentName) VALUES ('Logistics');
+INSERT INTO departments (DepartmentName) VALUES ('Legal');
+INSERT INTO departments (DepartmentName) VALUES ('Public Relations');
+
+-- Commit these inserts
+COMMIT;
+
+-- Check the inserted data
+SELECT * FROM departments;
+
+-- Start a new transaction for updates
+START TRANSACTION;
+
+-- 5 UPDATE statements
+UPDATE departments SET DepartmentName = 'Operations & Strategy' WHERE DepartmentName = 'Operations';
+UPDATE departments SET DepartmentName = 'Customer Success' WHERE DepartmentName = 'Customer Support';
+UPDATE departments SET DepartmentName = 'Logistics & Supply Chain' WHERE DepartmentName = 'Logistics';
+UPDATE departments SET DepartmentName = 'Corporate Legal' WHERE DepartmentName = 'Legal';
+UPDATE departments SET DepartmentName = 'PR & Communications' WHERE DepartmentName = 'Public Relations';
+
+-- Rollback these updates
+ROLLBACK;
+
+-- Verify that rollback reverted the updates
+SELECT * FROM departments;
+
+-- Start another transaction to apply updates permanently
+START TRANSACTION;
+
+UPDATE departments SET DepartmentName = 'Operations & Strategy' WHERE DepartmentName = 'Operations';
+UPDATE departments SET DepartmentName = 'Customer Success' WHERE DepartmentName = 'Customer Support';
+UPDATE departments SET DepartmentName = 'Logistics & Supply Chain' WHERE DepartmentName = 'Logistics';
+UPDATE departments SET DepartmentName = 'Corporate Legal' WHERE DepartmentName = 'Legal';
+UPDATE departments SET DepartmentName = 'PR & Communications' WHERE DepartmentName = 'Public Relations';
+
+-- Commit these updates
+COMMIT;
